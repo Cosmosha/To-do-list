@@ -26,7 +26,7 @@ const itemList = document.getElementById('addItem');
 
 function item() {
   itemList.innerHTML = tasks.map((task) => `<li class="items">
-    <label for="items"><input class="check" type="checkbox">${task.description}<i class="fa fa-ellipsis-v" id="addicon"></i></label>
+    <label for="items"><input class="check" type="checkbox">${task.description}<span class="icon"><i class="fa fa-ellipsis-v" id="addicon"></i></span></label>
 </li>`).join();
 }
 window.onload = () => {
