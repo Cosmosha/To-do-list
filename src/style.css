@@ -27,6 +27,10 @@ h3 {
   padding: 15px !important;
 }
 
+i {
+  color: #dfc8c852;
+}
+
 span.icon i {
   float: right;
   color: #c4b9b9;
@@ -46,10 +50,6 @@ input[type="text"] {
   border: none;
   font-style: italic;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-input[type="text"] i {
-  color: #dfc8c852;
 }
 
 input[type="checkbox"] {
