@@ -43,6 +43,10 @@ input[type="text"] {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+input[type="checkbox"] {
+  margin-right: 2rem !important;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
