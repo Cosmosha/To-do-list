@@ -37,7 +37,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio Project] <a name="about-project"></a>
+# 📖 [To-Do-List with Webpack ] <a name="about-project"></a>
 
 **[Portfolio Project]** is a website that displays and outline contact details, skills and knowledge as a software developer
 
@@ -92,7 +92,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://cosmosha.github.io)
+- [Live Demo Link](Coming Soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,7 +104,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-- HTML + CSS + Javascript.
+- HTML+CSS+Javascript.
 
 ### Setup
 
@@ -112,15 +112,20 @@ Clone this repository to your desired folder: https://github.com/Cosmosha/To-do-
 
 ### Install
 
-1.- Create a package.json:
+1.
+
+- Create a package.json:
 
 npm init -y
+
 or:
 
 npm init
 to fill up fields manually.
 
-2.- Install all dependencies:
+2.
+
+- Install all dependencies:
 
 npm install
 
@@ -161,7 +166,7 @@ Broswer, text editor.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Complete Task]**
-- [ ] **[Clear All Task]**
+- [ ] **[Clear All Tasks]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
