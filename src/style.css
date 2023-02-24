@@ -1,82 +1,92 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(201, 195, 195);
+    background-color: rgb(201, 195, 195);
 }
 
 section {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-  width: 500px;
-  background: #fff;
-  box-shadow: 2px 3px #e3dbdb70;
+    width: 500px;
+    background: #fff;
+    box-shadow: 2px 3px #e3dbdb70;
 }
 
 h3 {
-  font-weight: 100;
-  padding: 15px !important;
+    font-weight: 100;
+    padding: 15px !important;
 }
 
 i {
-  color: #dfc8c852;
+    color: #dfc8c852;
+}
+
+i:hover {
+    cursor: pointer;
+    color: #403f3f;
 }
 
 span.icon i {
-  float: right;
-  color: #c4b9b9;
+    float: right;
+    color: #c4b9b9;
+}
+
+span.icon i:hover {
+    cursor: cell;
+    color: #403f3f;
 }
 
 .task-box {
-  color: #000;
-  padding: 10px;
-  background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: #000;
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 input[type="text"] {
-  outline: none;
-  padding: 20px;
-  width: 93%;
-  border: none;
-  font-style: italic;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    outline: none;
+    padding: 20px;
+    width: 93%;
+    border: none;
+    font-style: italic;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 input[type="checkbox"] {
-  margin-right: 2rem !important;
+    margin-right: 2rem !important;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .add-item li.items {
-  padding: 20px;
-  background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .clear {
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-  background-color: rgb(248, 246, 246);
-  color: #937575;
-  border: none;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(248, 246, 246);
+    color: #937575;
+    border: none;
 }
 
 .clear:hover {
-  text-decoration: underline;
-  color: #3220f6;
+    text-decoration: underline;
+    color: #3220f6;
 }

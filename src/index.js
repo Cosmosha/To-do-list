@@ -1,34 +1,54 @@
 import './style.css';
+import addTask from './modules/addTask.js';
+import saveTask from './modules/saveToDB.js';
 
-const tasks = [{
-  description: 'Coding milestone projects',
-  completed: false,
-  index: 1,
-},
-{
-  description: 'Learning JS ES6',
-  completed: false,
-  index: 2,
-},
-{
-  description: 'Attending morning session meeting',
-  completed: false,
-  index: 3,
-},
-{
-  description: 'Going for lunch break',
-  completed: false,
-  index: 4,
-},
-];
+import render from './modules/render.js';
 
-const itemList = document.getElementById('addItem');
+class TaskTodo {
+    taskName = 'TaskCollection';
 
-function item() {
-  itemList.innerHTML = tasks.map((task) => `<li class="items">
-    <label for="items"><input class="check" type="checkbox">${task.description}<span class="icon"><i class="fa fa-ellipsis-v" id="addicon"></i></span></label>
-</li>`).join('');
+    constructor() {
+      this.TaskCollection = [];
+      this.inputTask = document.getElementById('todoInput');
+      this.addButton = document.getElementById('addButton');
+      this.itemList = document.getElementById('itemList');
+      this.clearBtn = document.getElementById('clear');
+
+      // Add Task on press Enter
+      this.inputTask.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          this.addTodoTask();
+          this.showTodoTasks();
+        }
+      });
+
+      // Add Task on icon click
+      this.addButton.addEventListener('click', () => {
+        this.addTodoTask();
+      });
+
+      // Clear Task on icon click
+      this.clearBtn.addEventListener('click', () => {
+        this.itemList.innerHTML = '';
+      });
+    }
+
+    // ─── Methods ─────────────────────────────────────────────────────────
+
+    addTodoTask = () => {
+      if (this.inputTask.value !== '') {
+        addTask(this.inputTask, this.TaskCollection);
+        saveTask(this.TaskCollection, this.taskName);
+      }
+    }
+
+    showTodoTasks = () => {
+      render(this.itemList);
+    }
 }
+
 window.onload = () => {
-  item();
+  const action = new TaskTodo();
+  action.showTodoTasks();
 };
