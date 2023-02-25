@@ -5,11 +5,12 @@
 }
 
 body {
-    background-color: rgb(201, 195, 195);
+    background-color: rgb(245, 243, 243);
 }
 
 section {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,12 +20,16 @@ section {
 .container {
     width: 500px;
     background: #fff;
-    box-shadow: 2px 3px #e3dbdb70;
+    box-shadow: 2px 3px #e3dbdbe8;
 }
 
 h3 {
     font-weight: 100;
     padding: 15px !important;
+}
+
+h3 i {
+    float: right;
 }
 
 i {
@@ -39,10 +44,12 @@ i:hover {
 span.icon i {
     float: right;
     color: #c4b9b9;
+    padding-top: 20px;
+    padding: 20px;
 }
 
 span.icon i:hover {
-    cursor: cell;
+    cursor: grab;
     color: #403f3f;
 }
 
@@ -53,17 +60,34 @@ span.icon i:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-input[type="text"] {
-    outline: none;
-    padding: 20px;
-    width: 93%;
-    border: none;
-    font-style: italic;
+.taskDiv,
+form {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+input[type="text"] {
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    width: 94%;
+    border: none;
+    font-style: italic;
+}
+
+input[type="text"] i {
+    float: right;
+}
+
 input[type="checkbox"] {
-    margin-right: 2rem !important;
+    margin-left: 1rem !important;
+}
+
+[contenteditable="true"]:focus {
+    outline: none;
+}
+
+.fa-trash {
+    cursor: pointer !important;
 }
 
 ul {
@@ -72,7 +96,7 @@ ul {
 }
 
 .add-item li.items {
-    padding: 20px;
+    display: flex;
     background: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
