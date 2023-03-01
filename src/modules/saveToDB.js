@@ -1,5 +1,18 @@
-const saveTask = (TaskCollection, taskName) => {
-  window.localStorage.setItem(taskName, JSON.stringify(TaskCollection));
-};
+/* eslint-disable no-console */
+const getName = 'TaskCollection';
+class TodoStorage {
+    static taskName = `${getName}`;
 
-export default saveTask;
+    static saveTask = (TaskCollection) => {
+      window.localStorage.setItem(this.taskName, JSON.stringify(TaskCollection));
+    };
+
+    static loadTask = () => {
+      if (window.localStorage.getItem(this.taskName) === null) {
+        return [];
+      }
+      return JSON.parse(window.localStorage.getItem(this.taskName));
+    }
+}
+
+export default TodoStorage;

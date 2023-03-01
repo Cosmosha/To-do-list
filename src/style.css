@@ -88,6 +88,7 @@ input[type="checkbox"] {
 
 .fa-trash {
     cursor: pointer !important;
+    display: none;
 }
 
 ul {
