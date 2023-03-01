@@ -8,7 +8,7 @@ class DeleteTodo {
     static removeTask(id) {
         TaskCollection = TaskCollection.filter((item) => item.id !== +id);
         TodoStorage.saveTask(TaskCollection);
-        console.log(TaskCollection);
+        // console.log(TaskCollection);
     }
 }
 
