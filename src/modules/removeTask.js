@@ -5,11 +5,12 @@ import TodoStorage from './saveToDB.js';
 
 let TaskCollection = TodoStorage.loadTask();
 class DeleteTodo {
-    static removeTask(id) {
-        TaskCollection = TaskCollection.filter((item) => item.id !== +id);
-        TodoStorage.saveTask(TaskCollection);
-        // console.log(TaskCollection);
-    }
+  static removeTask(id) {
+    TaskCollection = TaskCollection.filter((item) => item.id !== +id);
+    TaskCollection = TaskCollection.map((todo, index) => ({ ...todo, id: index + 1 }));
+    TodoStorage.saveTask(TaskCollection);
+    // console.log(TaskCollection);
+  }
 }
 
 export default DeleteTodo;

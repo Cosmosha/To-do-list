@@ -15,12 +15,13 @@ const addTask = () => {
 
     let TaskCollection = [];
     TaskCollection = TodoStorage.loadTask();
-    let get = 0;
+    // let get = 0;
 
-    for (let i = 0; i < TaskCollection.length; i += 1) {
-      get += 1;
-    }
-    id = get + 1;
+    // for (let i = 0; i < TaskCollection.length; i += 1) {
+    //   get += 1;
+    // }
+    id = TaskCollection.length + 1;
+    // id = get + 1;
     const task = new TaskTodo(getInput, completed, id);
     TaskCollection.push(task);
     TodoStorage.saveTask(TaskCollection);

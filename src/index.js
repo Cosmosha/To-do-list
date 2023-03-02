@@ -5,7 +5,7 @@ import './style.css';
 import editTask from './modules/editInput.js';
 import TaskList from './modules/render.js';
 import addTask from './modules/addTask.js';
-import RemoveTask from './modules/deleteTask.js';
+// import RemoveTask from './modules/deleteTask.js';
 
 class TaskTodo {
   constructor(description, completed, id) {
@@ -16,7 +16,10 @@ class TaskTodo {
 
     static getTodoTask = () => {
       TaskList.render();
-      RemoveTask.removeTodo();
+    }
+
+    static getTastAction() {
+      TaskList.reTodo();
       editTask();
       addTask();
     }
@@ -25,4 +28,5 @@ export default TaskTodo;
 
 window.onload = () => {
   TaskTodo.getTodoTask();
+  TaskTodo.getTastAction();
 };
