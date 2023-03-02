@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const getName = 'TaskCollection';
 class TodoStorage {
     static taskName = `${getName}`;

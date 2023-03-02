@@ -1,8 +1,4 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-console */
 import TodoStorage from './saveToDB.js';
-import TaskTodo from '../index.js';
-// import removeTask from './removeTask.js';
 
 const task = TodoStorage.loadTask();
 const editTask = () => {
@@ -16,7 +12,6 @@ const editTask = () => {
         event.preventDefault();
         task[i].description = editInput[i].value;
         TodoStorage.saveTask(task);
-        TaskTodo.getTodoTask();
       }
     });
     editInput[i].addEventListener('focus', () => {
