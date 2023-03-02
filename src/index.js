@@ -8,25 +8,22 @@ import addTask from './modules/addTask.js';
 // import RemoveTask from './modules/deleteTask.js';
 
 class TaskTodo {
-  constructor(description, completed, id) {
-    this.description = description;
-    this.completed = completed;
-    this.id = id;
-  }
+    constructor(description, completed, id) {
+        this.description = description;
+        this.completed = completed;
+        this.id = id;
+    }
 
     static getTodoTask = () => {
-      TaskList.render();
+        TaskList.render();
+        TaskList.reTodo();
+        editTask();
+        addTask();
     }
 
-    static getTastAction() {
-      TaskList.reTodo();
-      editTask();
-      addTask();
-    }
 }
 export default TaskTodo;
 
 window.onload = () => {
-  TaskTodo.getTodoTask();
-  TaskTodo.getTastAction();
+    TaskTodo.getTodoTask();
 };
