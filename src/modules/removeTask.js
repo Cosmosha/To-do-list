@@ -1,7 +1,7 @@
 import TodoStorage from './saveToDB.js';
 import TaskList from './render.js';
 import editTask from './editInput.js';
-import TodoNotification from './taskStatus.js';
+import TodoNotification from './taskNotification.js';
 
 const itemList = document.getElementById('itemList');
 const clearBtn = document.getElementById('clearAll');

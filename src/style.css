@@ -97,6 +97,10 @@ input[type="checkbox"] {
     outline: none;
 }
 
+.edit {
+    color: #807878;
+}
+
 .fa-trash {
     cursor: pointer !important;
     display: none;

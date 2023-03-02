@@ -5,8 +5,8 @@ class TaskList {
     const itemList = document.getElementById('itemList');
     const taskCol = TodoStorage.loadTask();
     const displayTask = taskCol.map((task) => ` <li class="items" data-id="${task.id}">
-        <input class="check" type="checkbox"/>
-        <input type="text" name="addTask" placeholder="${task.description}" class="edit" id="edit"/>
+        <input class="check" id="check" data-id="${task.id}" type="checkbox"/>
+        <input type="text" name="addTask" value="${task.description}" class="edit" id="edit"/>
         <span class="icon">
         <i class="iconImg fa fa-ellipsis-v"></i>
        </span>
@@ -17,5 +17,4 @@ class TaskList {
     itemList.innerHTML = displayTask.join('');
   }
 }
-
 export default TaskList;

@@ -1,12 +1,13 @@
 import TodoStorage from './saveToDB.js';
 
-class TodoNotification {
-  static statusBadge() {
-    const notification = document.querySelector('.badge');
-    const TaskCollection = TodoStorage.loadTask();
-
-    notification.innerHTML = TaskCollection.length;
-  }
+const checkBox = document.getElementById('check');
+const TaskCol = TodoStorage.loadTask();
+class TaskStatus {
+    static checkTask() {
+        const id = 0;
+        checkBox.addEventListener('click', () => {
+            console.log('worling');
+        });
+    }
 }
-
-export default TodoNotification;
+export default TaskStatus;

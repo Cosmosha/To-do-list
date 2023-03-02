@@ -1,7 +1,7 @@
 import TodoStorage from './saveToDB.js';
 import TaskList from './render.js';
 import editTask from './editInput.js';
-import TodoNotification from './taskStatus.js';
+import TodoNotification from './taskNotification.js';
 
 const inputTask = document.getElementById('todoInput');
 const addButton = document.getElementById('addButton');
