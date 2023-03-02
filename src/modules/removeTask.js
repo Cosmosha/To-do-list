@@ -1,8 +1,10 @@
 import TodoStorage from './saveToDB.js';
 import TaskList from './render.js';
 import editTask from './editInput.js';
+import TodoNotification from './taskStatus.js';
 
 const itemList = document.getElementById('itemList');
+const clearBtn = document.getElementById('clearAll');
 class DeleteTodo {
   static removeTask(id) {
     let TaskCollection = TodoStorage.loadTask();
@@ -18,10 +20,24 @@ class DeleteTodo {
           id = event.target.getAttribute('data-id');
           DeleteTodo.removeTask(id);
           TaskList.render();
+          TodoNotification.statusBadge();
           editTask();
         }
       });
     };
+
+    static deleteCompleted = () => {
+      let TaskCol = TodoStorage.loadTask();
+      clearBtn.addEventListener('click', (event) => {
+        if (event) {
+          TaskCol = TaskCol.filter((item) => !item.completed);
+          TodoStorage.saveTask(TaskCol);
+          TaskList.render();
+          TodoNotification.statusBadge();
+          editTask();
+        }
+      });
+    }
 }
 
 export default DeleteTodo;
