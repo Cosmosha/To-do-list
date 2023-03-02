@@ -9,6 +9,7 @@ class DeleteTodo {
     TaskCollection = TaskCollection.filter((item) => item.id !== +id);
     TaskCollection = TaskCollection.map((todo, index) => ({ ...todo, id: index + 1 }));
     TodoStorage.saveTask(TaskCollection);
+    window.location.reload();
     // console.log(TaskCollection);
   }
 }
