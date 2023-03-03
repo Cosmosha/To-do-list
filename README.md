@@ -90,7 +90,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Coming Soon)
+- [Live Demo Link](https://cosmosha.github.io/To-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
