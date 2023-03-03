@@ -1,34 +1,24 @@
 import './style.css';
+import editTask from './modules/editInput.js';
+import TaskList from './modules/render.js';
+import TaskAdd from './modules/addTask.js';
+import DeleteTodo from './modules/removeTask.js';
+import TodoNotification from './modules/taskNotification.js';
+import TaskStatus from './modules/taskStatus.js';
 
-const tasks = [{
-  description: 'Coding milestone projects',
-  completed: false,
-  index: 1,
-},
-{
-  description: 'Learning JS ES6',
-  completed: false,
-  index: 2,
-},
-{
-  description: 'Attending morning session meeting',
-  completed: false,
-  index: 3,
-},
-{
-  description: 'Going for lunch break',
-  completed: false,
-  index: 4,
-},
-];
-
-const itemList = document.getElementById('addItem');
-
-function item() {
-  itemList.innerHTML = tasks.map((task) => `<li class="items">
-    <label for="items"><input class="check" type="checkbox">${task.description}<span class="icon"><i class="fa fa-ellipsis-v" id="addicon"></i></span></label>
-</li>`).join('');
+class TaskTodo {
+    static getTodoTask = () => {
+      TaskList.render();
+      DeleteTodo.reTodo();
+      DeleteTodo.deleteCompleted();
+      editTask();
+      TaskAdd.addTask();
+      TodoNotification.statusBadge();
+      TaskStatus.checkTask();
+    }
 }
+export default TaskTodo;
+
 window.onload = () => {
-  item();
+  TaskTodo.getTodoTask();
 };

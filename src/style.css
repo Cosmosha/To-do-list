@@ -5,11 +5,12 @@
 }
 
 body {
-  background-color: rgb(201, 195, 195);
+  background-color: rgb(245, 243, 243);
 }
 
 section {
-  margin-top: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@ section {
 .container {
   width: 500px;
   background: #fff;
-  box-shadow: 2px 3px #e3dbdb70;
+  box-shadow: 2px 3px #e3dbdbe8;
 }
 
 h3 {
@@ -31,9 +32,40 @@ i {
   color: #dfc8c852;
 }
 
+.badge {
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 40%;
+}
+
+h3 i {
+  float: right;
+}
+
+i:hover {
+  cursor: pointer;
+  color: #403f3f;
+}
+
 span.icon i {
   float: right;
   color: #c4b9b9;
+  padding: 20px;
+  padding-top: 20px;
+}
+
+input[type="text"] i {
+  float: right;
+}
+
+span.icon i:hover {
+  cursor: grab;
+  color: #403f3f;
 }
 
 .task-box {
@@ -43,17 +75,39 @@ span.icon i {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-input[type="text"] {
-  outline: none;
-  padding: 20px;
-  width: 93%;
-  border: none;
-  font-style: italic;
+.taskDiv,
+form {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+input[type="text"] {
+  background: transparent;
+  outline: none;
+  padding: 20px;
+  width: 94%;
+  border: none;
+  font-style: italic;
+}
+
 input[type="checkbox"] {
-  margin-right: 2rem !important;
+  margin-left: 1rem !important;
+}
+
+[contenteditable="true"]:focus {
+  outline: none;
+}
+
+.edit {
+  color: #807878;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.fa-trash {
+  cursor: pointer !important;
+  display: none;
 }
 
 ul {
@@ -62,7 +116,7 @@ ul {
 }
 
 .add-item li.items {
-  padding: 20px;
+  display: flex;
   background: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
