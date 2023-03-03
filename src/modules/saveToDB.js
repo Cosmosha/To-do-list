@@ -7,10 +7,8 @@ class TodoStorage {
     };
 
     static loadTask = () => {
-      if (window.localStorage.getItem(this.taskName) === null) {
-        return [];
-      }
-      return JSON.parse(window.localStorage.getItem(this.taskName));
+      const TaskCollection = JSON.parse(localStorage.getItem(this.taskName)) || [];
+      return TaskCollection;
     }
 }
 

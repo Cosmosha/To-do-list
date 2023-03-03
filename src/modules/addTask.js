@@ -2,6 +2,7 @@ import TodoStorage from './saveToDB.js';
 import TaskList from './render.js';
 import editTask from './editInput.js';
 import TodoNotification from './taskNotification.js';
+import TaskStatus from './taskStatus.js';
 
 const inputTask = document.getElementById('todoInput');
 const addButton = document.getElementById('addButton');
@@ -33,6 +34,7 @@ inputTask.addEventListener('keypress', (event) => {
     TaskList.render();
     TodoNotification.statusBadge();
     editTask();
+    TaskStatus.checkTask();
   }
 });
 
@@ -42,6 +44,7 @@ addButton.addEventListener('click', (event) => {
   TaskList.render();
   TodoNotification.statusBadge();
   editTask();
+  TaskStatus.checkTask();
 });
 
 export default TaskAdd;

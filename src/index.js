@@ -8,17 +8,17 @@ import TaskStatus from './modules/taskStatus.js';
 
 class TaskTodo {
     static getTodoTask = () => {
-        TaskList.render();
-        DeleteTodo.reTodo();
-        DeleteTodo.deleteCompleted();
-        editTask();
-        TaskAdd.addTask();
-        TodoNotification.statusBadge();
-        TaskStatus.checkTask();
+      TaskList.render();
+      DeleteTodo.reTodo();
+      DeleteTodo.deleteCompleted();
+      editTask();
+      TaskAdd.addTask();
+      TodoNotification.statusBadge();
+      TaskStatus.checkTask();
     }
 }
 export default TaskTodo;
 
 window.onload = () => {
-    TaskTodo.getTodoTask();
+  TaskTodo.getTodoTask();
 };

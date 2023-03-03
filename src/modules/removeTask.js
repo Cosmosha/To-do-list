@@ -28,14 +28,12 @@ class DeleteTodo {
 
     static deleteCompleted = () => {
       let TaskCol = TodoStorage.loadTask();
-      clearBtn.addEventListener('click', (event) => {
-        if (event) {
-          TaskCol = TaskCol.filter((item) => !item.completed);
-          TodoStorage.saveTask(TaskCol);
-          TaskList.render();
-          TodoNotification.statusBadge();
-          editTask();
-        }
+      clearBtn.addEventListener('click', () => {
+        TaskCol = TaskCol.filter((item) => !item.completed);
+        TodoStorage.saveTask(TaskCol);
+        TodoNotification.statusBadge();
+        editTask();
+        TaskList.render();
       });
     }
 }
