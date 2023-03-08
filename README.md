@@ -8,7 +8,7 @@
   <img src="./log.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>To-Do-List with Webpack | README</b></h3>
+  <h3><b>To-Do-List APP with Webpack | README</b></h3>
 
 </div>
 
@@ -37,9 +37,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To-Do-List with Webpack ] <a name="about-project"></a>
-
-**[Portfolio Project]** is a website that displays and outline contact details, skills and knowledge as a software developer
+# 📖 [To-Do-List APP with Webpack ] <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -92,7 +90,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Coming Soon)
+- [Live Demo Link](https://cosmosha.github.io/To-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
